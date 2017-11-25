@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'simplex/theme_manifest', media: 'all',  'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class='container'> 
+<%= render 'layouts/navigation_bootswatch/navbar' %>
+  <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
+  </body>
+</html>

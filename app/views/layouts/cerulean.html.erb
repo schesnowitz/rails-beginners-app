@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @app_setting.tab_name %></title> 
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'cerulean/theme_manifest', media: 'all',  'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render 'layouts/navigation_bootswatch/navbar' %>
+  <div class='container'>  
+  <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
+  </body>
+</html>

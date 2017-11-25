@@ -40,4 +40,10 @@ end
   puts comment.inspect
 end
 
+
+app_setting = AppSetting.create!(
+  theme_name: 'pulse',
+  tab_name: 'acme_app'
+)
+puts app_setting.inspect
 # rake db:drop db:create db:migrate db:seed
