@@ -1,6 +1,7 @@
 class AppSetting < ApplicationRecord
 
 
+ validates_presence_of :tab_name, :theme_name
 
 
   private

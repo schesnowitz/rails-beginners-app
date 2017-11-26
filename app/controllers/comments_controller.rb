@@ -5,13 +5,14 @@ before_action :authenticate_user!
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
     @comment.user_id = current_user.id if current_user
-
+    @user = current_user
     if @comment.save
       CommentMailer.new_comment(@comment).deliver_later
       flash[:success] = "The comment has been saved."
       redirect_to post_path(@post)
     else
-      flash[:danger] = "There was a problem saving the comment."
+      redirect_to post_path(@post)
+      flash[:danger] = "#{@user.first_name}, We have these errors: " + @comment.errors.full_messages.to_sentence 
     end
   end 
 
@@ -22,8 +23,9 @@ before_action :authenticate_user!
       flash[:success] = "The comment has been updated."
       redirect_to post_path(@post)
     else 
-      flash[:danger] = "There was a problem saving the comment."
-      render 'edit'
+      flash[:danger] = "#{@comment.user.first_name}, We have these errors: " + @comment.errors.full_messages.to_sentence 
+      redirect_back(fallback_location: root_path)
+
   end 
 end
 

@@ -1,4 +1,12 @@
 <p>
+    <% if @post.user.image.present? %>
+    <%= image_tag @post.user.image_url(:thumb), class: 'rounded-circle' %>
+    <% else %>
+    <%= image_tag 'no_image', class: 'rounded-circle' %>
+    <% end %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @post.title %>
 </p>

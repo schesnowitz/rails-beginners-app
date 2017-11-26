@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20171125052400) do
   enable_extension "plpgsql"
 
   create_table "app_settings", force: :cascade do |t|
-    t.string "tab_name"
-    t.string "theme_name"
+    t.string "tab_name", default: "Acme App"
+    t.string "theme_name", default: "default"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

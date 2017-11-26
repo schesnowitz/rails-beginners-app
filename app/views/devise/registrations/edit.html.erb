@@ -12,9 +12,9 @@
     <%= f.input :image, as: :file, label: false %> 
 
     <% if @user.image.present? %>
-    <%= image_tag @user.image_url(:thumb) %>
+    <%= image_tag @user.image_url(:thumb), class: 'rounded-circle' %>
     <% else %>
-    <%= image_tag 'no_image' %>
+    <%= image_tag 'no_image', class: 'rounded-circle' %>
     <% end %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
