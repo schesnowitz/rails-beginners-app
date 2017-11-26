@@ -2,9 +2,11 @@ class AppSetting < ApplicationRecord
 
 
 
-  private 
-  
-  APP_THEME = %w( 
+
+  private
+
+  APP_THEME = %w(  
+    default
     cerulean
     darkly
     litera
