@@ -1,6 +1,6 @@
 class TemplateOnesController < ApplicationController
   before_action :set_template_one, only: [:show, :edit, :update, :destroy]
-
+  layout 'template_ones' 
   # GET /template_ones
   # GET /template_ones.json
   def index
@@ -64,7 +64,7 @@ class TemplateOnesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template_one
-      @template_one = TemplateOne.find(params[:id])
+      @template_one = TemplateOne.find(1)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
