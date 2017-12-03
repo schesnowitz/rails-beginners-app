@@ -19,7 +19,7 @@ before_action :authenticate_user!
   def update
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
-    is_not_comment_owner
+
     if @comment.update(comment_params)
       flash[:success] = "The comment has been updated."
       redirect_to post_path(@post)
