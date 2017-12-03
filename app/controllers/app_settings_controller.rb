@@ -1,5 +1,7 @@
 class AppSettingsController < ApplicationController
   before_action :set_app_setting, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user
+  before_action :authenticate_user!
 
   # GET /app_settings
   # GET /app_settings.json
@@ -60,8 +62,16 @@ class AppSettingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
 
   private
+
+    def admin_user
+      if !current_user.try(:admin) == true 
+        flash[:danger] = "The resource does not exist"
+        redirect_to root_path
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_app_setting
       @app_setting = AppSetting.find(params[:id])

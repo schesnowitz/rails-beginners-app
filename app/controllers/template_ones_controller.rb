@@ -10,6 +10,9 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones/1
   # GET /template_ones/1.json
   def show
+    if current_user
+      redirect_to posts_path 
+    end
   end
 
   # GET /template_ones/new

@@ -6,7 +6,8 @@ password: 'password',
 password_confirmation: 'password',
 first_name: 'Steve',
 last_name: 'Chesnowitz',
-username: 'Steve-O'
+username: 'Steve-O',
+admin: true
 )
 puts user.inspect
 
@@ -46,4 +47,10 @@ app_setting = AppSetting.create!(
   tab_name: 'acme_app'
 )
 puts app_setting.inspect
-# rake db:drop db:create db:migrate db:seed
+
+
+t1 = TemplateOne.create!(
+  string_input_1: 'any text will do'
+)
+puts t1.inspect
+
