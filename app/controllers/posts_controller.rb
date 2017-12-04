@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :not_owner_of_post, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
+
   
   def index
     @posts = Post.all
@@ -62,7 +64,12 @@ class PostsController < ApplicationController
 
   private
 
-
+    def not_owner_of_post
+      if current_user != @post.user
+        flash[:danger] = "You need to be the author to perform this function!"
+        redirect_back(fallback_location: root_path)
+      end
+    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_post
