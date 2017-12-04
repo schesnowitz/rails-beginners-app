@@ -10,7 +10,8 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones/1
   # GET /template_ones/1.json
   def show
-    if current_user
+    # if current_user and not current_user.try(:admin?)
+    if current_user && !current_user.try(:admin?)
       redirect_to posts_path 
     end
   end
