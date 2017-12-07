@@ -40,7 +40,12 @@ ActiveRecord::Schema.define(version: 20171202194931) do
   end
 
   create_table "template_ones", force: :cascade do |t|
-    t.string "string_input_1"
+    t.boolean "about_image_show_default", default: false
+    t.boolean "about_hide", default: false
+    t.string "about_title"
+    t.string "about_text"
+    t.string "about_text_2"
+    t.string "about_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -50,7 +50,10 @@ puts app_setting.inspect
 
 
 t1 = TemplateOne.create!(
-  string_input_1: 'any text will do'
+  about_title: 'any text will do',
+  about_text: 'any text will do',
+  about_text_2: "some more text",
+  about_image: ''
 )
 puts t1.inspect
 

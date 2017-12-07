@@ -1,0 +1,33 @@
+<%= render 'template_ones/edit_partials/service' %> 
+
+
+<div class='container'> 
+<%= bootstrap_flash %>  
+<%= simple_form_for(@template_one) do |f| %>
+
+
+  <div class="form-inputs">
+    <%= f.input :service_hide, label: "Hide this module on main page?" %> 
+    <%= f.input :service_icon_1 %>
+    <%= f.input :service_title_1 %>
+    <%= f.input :service_text_1 %>
+    <%= f.input :service_icon_2 %>
+    <%= f.input :service_title_2 %>
+    <%= f.input :service_text_2 %>
+    <%= f.input :service_icon_3 %>
+    <%= f.input :service_title_3 %>
+    <%= f.input :service_text_3 %>
+    <%= f.input :service_icon_4 %>
+    <%= f.input :service_title_4 %>
+    <%= f.input :service_text_4 %>
+    <%= f.input :service_icon_5 %>
+    <%= f.input :service_title_5 %>
+    <%= f.input :service_text_5 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+     | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+  </div>
+<% end %>
+</div>

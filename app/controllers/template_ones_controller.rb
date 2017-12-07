@@ -1,5 +1,7 @@
 class TemplateOnesController < ApplicationController
-  before_action :set_template_one, only: [:show, :edit, :update, :destroy]
+  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about]
+  before_action :authenticate_user!, except: [:show]
+  before_action :not_admin_user, only: [:edit, :update, :destroy, :index]
   layout 'template_ones' 
   # GET /template_ones
   # GET /template_ones.json
@@ -46,7 +48,7 @@ class TemplateOnesController < ApplicationController
   def update
     respond_to do |format|
       if @template_one.update(template_one_params)
-        format.html { redirect_to @template_one, notice: 'Template one was successfully updated.' }
+        format.html { redirect_back fallback_location: root_path, notice: 'Template one was successfully updated.' }
         format.json { render :show, status: :ok, location: @template_one }
       else
         format.html { render :edit }
@@ -65,14 +67,47 @@ class TemplateOnesController < ApplicationController
     end
   end
 
+  def edit_about
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template_one
       @template_one = TemplateOne.find(1)
     end
 
+    def not_admin_user
+      if !current_user.try(:admin?)
+        flash[:danger] = "This resource is not available."
+        redirect_to root_path
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def template_one_params
-      params.require(:template_one).permit(:string_input_1)
+      params.require(:template_one).permit(
+        :about_image_show_default,
+        :about_hide, 
+        :about_title,
+        :about_text,
+        :about_text_2,
+        :about_image,
+        :service_hide,
+        :service_icon_1,
+        :service_title_1,
+        :service_text_1,
+        :service_icon_2,
+        :service_title_2,
+        :service_text_2,
+        :service_icon_3,
+        :service_title_3,
+        :service_text_3,
+        :service_icon_4,
+        :service_title_4,
+        :service_text_4,
+        :service_icon_5,
+        :service_title_5,
+        :service_text_5
+        )
     end
 end

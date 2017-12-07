@@ -1,6 +1,4 @@
 <!-- About Section -->
-<% if @template_one.about_hide == true %> 
-<% else %>
 <% if @template_one.about_image.present? && @template_one.about_image_show_default == false %> 
 <section class="page-section" id="about">
   <div class="container wow fadeIn">
@@ -16,7 +14,6 @@
       </div>
     </div>
   </div>
-
 </section>
 <% else %>
 <section class="page-section" id="about">
@@ -35,5 +32,4 @@
   </div>
 </section>
 <% end %>
-<% end %>
-<%= link_to "Edit About", edit_about_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
+

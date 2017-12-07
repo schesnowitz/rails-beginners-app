@@ -10,9 +10,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+      <% if !@template_one.about_hide == true %>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
+      <% end %>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#services">Services</a>
         </li>
