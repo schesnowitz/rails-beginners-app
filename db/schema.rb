@@ -46,6 +46,22 @@ ActiveRecord::Schema.define(version: 20171202194931) do
     t.string "about_text"
     t.string "about_text_2"
     t.string "about_image"
+    t.boolean "service_hide", default: false
+    t.string "service_icon_1"
+    t.string "service_title_1"
+    t.string "service_text_1"
+    t.string "service_icon_2"
+    t.string "service_title_2"
+    t.string "service_text_2"
+    t.string "service_icon_3"
+    t.string "service_title_3"
+    t.string "service_text_3"
+    t.string "service_icon_4"
+    t.string "service_title_4"
+    t.string "service_text_4"
+    t.string "service_icon_5"
+    t.string "service_title_5"
+    t.string "service_text_5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

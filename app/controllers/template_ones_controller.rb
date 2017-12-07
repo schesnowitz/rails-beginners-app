@@ -1,5 +1,5 @@
 class TemplateOnesController < ApplicationController
-  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about]
+  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about, :edit_services]
   before_action :authenticate_user!, except: [:show]
   before_action :not_admin_user, only: [:edit, :update, :destroy, :index]
   layout 'template_ones' 
@@ -70,6 +70,9 @@ class TemplateOnesController < ApplicationController
   def edit_about
   end
 
+  def edit_services
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template_one
@@ -105,7 +108,6 @@ class TemplateOnesController < ApplicationController
         :service_icon_4,
         :service_title_4,
         :service_text_4,
-        :service_icon_5,
         :service_title_5,
         :service_text_5
         )

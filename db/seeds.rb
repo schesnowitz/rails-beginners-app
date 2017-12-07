@@ -53,7 +53,21 @@ t1 = TemplateOne.create!(
   about_title: 'any text will do',
   about_text: 'any text will do',
   about_text_2: "some more text",
-  about_image: ''
+  about_image: '',
+  service_icon_1: "fa fa-code",
+  service_title_1: "some more text",
+  service_text_1: "some more text",
+  service_icon_2: "fa fa-code",
+  service_title_2: "some more text",
+  service_text_2: "some more text",
+  service_icon_3: "fa fa-code",
+  service_title_3: "some more text",
+  service_text_3: "some more text",
+  service_icon_4: "fa fa-code",
+  service_title_4: "some more text",
+  service_text_4: "some more text",
+  service_title_5: "some more text",
+  service_text_5: "some more text"
 )
 puts t1.inspect
 

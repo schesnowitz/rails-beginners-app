@@ -15,9 +15,11 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
       <% end %>
+      <% if !@template_one.service_hide? %> 
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#services">Services</a>
         </li>
+      <% end %>  
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#process">Process</a>
         </li>

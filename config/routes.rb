@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   root to: 'template_ones#show'
   get 'edit_about', to: 'template_ones#edit_about'
+  get 'edit_services', to: 'template_ones#edit_services'
 end
