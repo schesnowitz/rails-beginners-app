@@ -67,7 +67,27 @@ t1 = TemplateOne.create!(
   service_title_4: "some more text",
   service_text_4: "some more text",
   service_title_5: "some more text",
-  service_text_5: "some more text"
+  service_text_5: "some more text",
+  main_process_title: "main_process_title",
+  main_process_title_text: "main_process_title_text",
+  process_icon_1: "some more text",
+  sub_title_1: "sub_title_1",
+  process_li_1: "process_li_1",
+  process_li_2: "process_li_2",
+  process_li_3: "process_li_3",
+  process_li_4: "process_li_4",
+  process_icon_2: "some more text",
+  sub_title_2: "sub_title_2",
+  process_li_5: "process_li_5",
+  process_li_6: "process_li_6",
+  process_li_7: "process_li_7",
+  process_li_8: "process_li_8",
+  process_icon_3: "some more text",
+  sub_title_3: "sub_title_3t",
+  process_li_9: "process_li_9",
+  process_li_10: "process_li_10",
+  process_li_11: "process_li_11",
+  process_li_12: "process_li_12"
 )
 puts t1.inspect
 

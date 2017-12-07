@@ -22,6 +22,29 @@ class CreateTemplateOnes < ActiveRecord::Migration[5.1]
       t.string :service_text_4
       t.string :service_title_5
       t.string :service_text_5
+      t.boolean :process_hide 
+      t.string :main_process_title
+      t.string :main_process_title_text
+      t.string :process_icon_1
+      t.string :sub_title_1
+      t.string :process_li_1
+      t.string :process_li_2
+      t.string :process_li_3
+      t.string :process_li_4
+      t.string :process_icon_2
+      t.string :sub_title_2
+      t.string :process_li_5
+      t.string :process_li_6
+      t.string :process_li_7
+      t.string :process_li_8
+      t.string :process_icon_3
+      t.string :sub_title_3
+      t.string :process_li_9
+      t.string :process_li_10
+      t.string :process_li_11
+      t.string :process_li_12
+
+
       t.timestamps
     end
   end

@@ -1,5 +1,4 @@
  <!-- Services Section -->
- <% if !@template_one.process_hide? %>
     <section class="page-section services" id="process">
       <div class="container">
         <div class="text-center wow fadeIn">
@@ -62,5 +61,3 @@
         </div>
       </div>
     </section>
-    <% end %>
-    <%= link_to "Edit Process", edit_process_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 

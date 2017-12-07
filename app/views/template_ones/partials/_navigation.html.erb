@@ -20,9 +20,11 @@
           <a class="nav-link js-scroll-trigger" href="#services">Services</a>
         </li>
       <% end %>  
+      <% if !@template_one.process_hide? %>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#process">Process</a>
         </li>
+      <% end %>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#work">Work</a>
         </li>

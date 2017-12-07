@@ -1,0 +1,43 @@
+<%= render 'template_ones/edit_partials/process' %> 
+
+
+<div class='container'> 
+<%= bootstrap_flash %>  
+<%= simple_form_for(@template_one) do |f| %>
+
+
+  <div class="form-inputs">
+    <%= f.input :process_hide, label: "Hide this module on main page?" %> 
+
+    <%= f.input :main_process_title %>
+    <%= f.input :main_process_title_text %>
+
+
+    <%= f.input :process_icon_1, collection: TemplateOne::FA_ICONS, include_blank: false %>
+    <%= f.input :sub_title_1 %>
+    <%= f.input :process_li_1 %>
+    <%= f.input :process_li_2 %>
+    <%= f.input :process_li_3 %>
+    <%= f.input :process_li_4 %>
+
+    <%= f.input :process_icon_2, collection: TemplateOne::FA_ICONS, include_blank: false %>
+    <%= f.input :sub_title_2 %>
+    <%= f.input :process_li_5 %>
+    <%= f.input :process_li_6 %>
+    <%= f.input :process_li_7 %>
+    <%= f.input :process_li_8 %>
+
+    <%= f.input :process_icon_3, collection: TemplateOne::FA_ICONS, include_blank: false %>
+    <%= f.input :sub_title_3 %>
+    <%= f.input :process_li_9 %>
+    <%= f.input :process_li_10 %>
+    <%= f.input :process_li_11 %>
+    <%= f.input :process_li_12 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+     | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+  </div>
+<% end %>
+</div>
