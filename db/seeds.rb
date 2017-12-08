@@ -87,7 +87,10 @@ t1 = TemplateOne.create!(
   process_li_9: "process_li_9",
   process_li_10: "process_li_10",
   process_li_11: "process_li_11",
-  process_li_12: "process_li_12"
+  process_li_12: "process_li_12",
+  header_title: "Header Title",
+  header_text: "Header Text"
+  
 )
 puts t1.inspect
 

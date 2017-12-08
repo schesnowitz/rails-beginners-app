@@ -1,5 +1,5 @@
 class TemplateOnesController < ApplicationController
-  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about, :edit_services, :edit_process] 
+  before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about, :edit_services, :edit_process, :edit_header, :edit_contact, :edit_action, :edit_testimonial, :edit_portfolio_carousel, :edit_portfolio_carousel_heading, :edit_portfolio_grid, :edit_footer, :edit_navigation, :edit_newsletter] 
   before_action :authenticate_user!, except: [:show]
   before_action :not_admin_user, only: [:edit, :update, :destroy, :index]
   layout 'template_ones' 
@@ -76,6 +76,36 @@ class TemplateOnesController < ApplicationController
   def edit_process
   end
 
+  def edit_header
+  end
+
+  def edit_contact
+  end
+
+  def edit_action 
+  end
+
+  def edit_testimonial
+  end
+
+  def edit_portfolio_carousel
+  end
+
+  def edit_portfolio_carousel_heading
+  end
+
+  def edit_portfolio_grid
+  end
+
+  def edit_footer
+  end
+
+  def edit_navigation
+  end
+
+  def edit_newsletter
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template_one
@@ -133,8 +163,31 @@ class TemplateOnesController < ApplicationController
         :process_li_9,
         :process_li_10,
         :process_li_11,
-        :process_li_12
+        :process_li_12,
+        :header_hide,
+        :header_title, 
+        :header_text,
+        :header_image,
+        :contact_hide,
+
+        :action_hide,
+
+        :tesimonial_hide,
+
+        :portfolio_carousel_hide,
+
+        :portfolio_carousel_heading_hide,
+
+        :portfolio_grid_hide,
+
+        :footer_hide,
+
+        :navigation_hide,
+
+        :newsletter_hide
+
         )
     end
 end
-    
+
+
