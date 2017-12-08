@@ -1,6 +1,8 @@
 class TemplateOne < ApplicationRecord
   mount_uploader :about_image, AboutImageUploader  
 
+  has_many :projects
+
   private
 
   FA_ICONS = %w(

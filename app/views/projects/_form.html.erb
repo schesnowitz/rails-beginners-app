@@ -1,0 +1,16 @@
+<%= simple_form_for(@project) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :button_text %>
+    <%= f.input :image_1 %>
+    <%= f.input :image_2 %>
+    <%= f.input :template_one_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
