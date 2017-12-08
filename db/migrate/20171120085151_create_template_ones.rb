@@ -55,6 +55,7 @@ class CreateTemplateOnes < ActiveRecord::Migration[5.1]
       t.boolean :portfolio_grid_hide
       t.boolean :footer_hide
       t.boolean :navigation_hide
+      t.string :navigation_title
       t.boolean :newsletter_hide
 
       t.timestamps

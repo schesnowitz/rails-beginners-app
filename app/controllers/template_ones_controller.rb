@@ -183,6 +183,7 @@ class TemplateOnesController < ApplicationController
         :footer_hide,
 
         :navigation_hide,
+        :navigation_title,
 
         :newsletter_hide
 

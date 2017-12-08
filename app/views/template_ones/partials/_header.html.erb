@@ -20,4 +20,6 @@
       </div>
         
     </header>
-        <%= link_to "Edit Header", edit_header_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
+<%= link_to "Edit Header", edit_header_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
+ 
+<%= link_to "Edit Navigation", edit_navigation_path, class: "btn btn-outline-info btn-sm pull-left" if current_user.try(:admin?) %> 

@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20171202194931) do
     t.boolean "portfolio_grid_hide"
     t.boolean "footer_hide"
     t.boolean "navigation_hide"
+    t.string "navigation_title"
     t.boolean "newsletter_hide"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
