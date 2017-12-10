@@ -91,8 +91,28 @@ t1 = TemplateOne.create!(
   header_title: "Header Title",
   header_text: "Header Text",
 
+
   navigation_title: "CHESNOWITZ" 
   
 )
 puts t1.inspect
 
+project = Project.create!(
+  # Carousel project section
+  name: "Header Text", 
+  description: "Header Text", 
+  button_text: "Header Text", 
+  image_1: "",
+  image_2: "",
+  modal_name: "Header Text",
+  modal_description: "Header Text",
+  modal_client: "Header Text",
+  modal_date: "Header Text",
+  modal_service: "Header Text",
+  modal_image_1: "",
+  modal_image_2: "",
+  modal_image_3: "",
+  modal_image_4: "",
+  template_one_id: 1
+)
+puts project.inspect

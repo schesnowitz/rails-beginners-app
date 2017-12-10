@@ -29,6 +29,5 @@
   <strong>Template one:</strong>
   <%= @project.template_one_id %>
 </p>
+<%= link_to 'Back', edit_portfolio_carousel_path(@template_one), class: 'btn btn-success' %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :find_the_template, except: [:index]
 
   # GET /projects
   # GET /projects.json
@@ -14,7 +15,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    @project = @template_one.projects.new
   end
 
   # GET /projects/1/edit
@@ -28,9 +29,10 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to edit_portfolio_carousel_path(@template_one), notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
+        flash[:danger] = @project.errors.full_messages.to_sentence
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
@@ -42,7 +44,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to edit_portfolio_carousel_path(@template_one), notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to edit_portfolio_carousel_path(@template_one), notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -67,8 +69,28 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
+    def find_the_template
+      @template_one = TemplateOne.find(1)
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :button_text, :image_1, :image_2, :template_one_id)
+      params.require(:project).permit(
+      :name, 
+      :description, 
+      :button_text, 
+      :image_1, 
+      :image_2, 
+      :template_one_id,
+      :modal_name,
+      :modal_description,
+      :modal_client,
+      :modal_date,
+      :modal_service,
+      :modal_image_1,
+      :modal_image_2,
+      :modal_image_3,
+      :modal_image_4
+      )
     end
 end

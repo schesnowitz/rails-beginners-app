@@ -16,6 +16,7 @@ class TemplateOnesController < ApplicationController
     if current_user && !current_user.try(:admin?)
       redirect_to posts_path 
     end
+    @projects = Project.all
   end
 
   # GET /template_ones/new
@@ -89,6 +90,7 @@ class TemplateOnesController < ApplicationController
   end
 
   def edit_portfolio_carousel
+    @projects = Project.all
   end
 
   def edit_portfolio_carousel_heading
