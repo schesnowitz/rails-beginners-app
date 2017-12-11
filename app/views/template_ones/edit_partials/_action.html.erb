@@ -1,16 +1,31 @@
    <!-- Call to Action -->
+   <% if @template_one.action_use_default_image == true || !@template_one.action_image_url.present?   %>
     <section class="call-to-action" style="background-image: url(<%= asset_url 'template_ones/creative/backgrounds/bg-quote.jpg'%>);">
+    <% else %>
+    <section class="call-to-action" style="background-image: url(<%= asset_url @template_one.action_image_url(:version_1900x1267) if @template_one.action_image_url.present? %>);">
+    <% end %>
       <div class="container wow fadeIn">
         <div class="row">
           <div class="col-md-10 mx-auto">
-            <span class="quote">Good
-              <span class="text-primary">design</span>
-              is finding that perfect balance between the way something
-              <span class="text-primary">looks</span>
-              and how it
-              <span class="text-primary">functions</span>.</span>
+            <span class="quote">
+                <%= @template_one.action_text_1 %>
+              <span class="text-primary">
+                <%= @template_one.action_text_2 %>
+              </span>
+                <%= @template_one.action_text_3 %>
+              <span class="text-primary">
+                <%= @template_one.action_text_4 %>
+              </span>
+                <%= @template_one.action_text_5 %>
+              <span class="text-primary">
+                <%= @template_one.action_text_6 %>
+              </span>
+                <%= @template_one.action_text_7 %>
+              </span>
             <hr class="colored">
-            <a class="btn btn-primary js-scroll-trigger" href="#process">How We Work</a>
+            <a class="btn btn-primary js-scroll-trigger" href="#process">
+              <%= @template_one.action_button_text %>
+            </a>
           </div>
         </div>
       </div>

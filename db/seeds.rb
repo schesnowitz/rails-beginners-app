@@ -90,7 +90,15 @@ t1 = TemplateOne.create!(
   process_li_12: "process_li_12",
   header_title: "Header Title",
   header_text: "Header Text",
-
+  action_text_1: 'action_text_1',
+  action_text_2: 'action_text_2',
+  action_text_3: 'action_text_3',
+  action_text_4: 'action_text_4',
+  action_text_5: 'action_text_5',
+  action_text_6: 'action_text_6',   
+  action_text_7: 'action_text_7',
+  action_button_text: 'action_button_text',
+  action_image: '',
 
   navigation_title: "CHESNOWITZ" 
   

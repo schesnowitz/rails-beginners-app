@@ -1,6 +1,6 @@
 class TemplateOne < ApplicationRecord
   mount_uploader :about_image, AboutImageUploader  
-
+  mount_uploader :action_image, GeneralImageUploader  
   has_many :projects
 
   private

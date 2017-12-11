@@ -173,6 +173,16 @@ class TemplateOnesController < ApplicationController
         :contact_hide,
 
         :action_hide,
+        :action_text_1,
+        :action_text_2,
+        :action_text_3,
+        :action_text_4,
+        :action_text_5,
+        :action_text_6,   
+        :action_text_7,
+        :action_button_text,
+        :action_use_default_image,
+        :action_image, 
 
         :tesimonial_hide,
 
