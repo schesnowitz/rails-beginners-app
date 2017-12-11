@@ -99,7 +99,8 @@ t1 = TemplateOne.create!(
   action_text_7: 'action_text_7',
   action_button_text: 'action_button_text',
   action_image: '',
-
+  portfolio_header_title: 'portfolio_header_title',
+  portfolio_header_text: 'portfolio_header_text',
   navigation_title: "CHESNOWITZ" 
   
 )

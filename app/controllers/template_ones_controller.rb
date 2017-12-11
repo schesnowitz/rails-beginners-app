@@ -191,7 +191,9 @@ class TemplateOnesController < ApplicationController
 
         :portfolio_carousel_hide,
 
-        :portfolio_carousel_heading_hide,
+        :portfolio_header_hide,
+        :portfolio_header_title,
+        :portfolio_header_text,
 
         :portfolio_grid_hide,
 
