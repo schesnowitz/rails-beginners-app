@@ -171,6 +171,9 @@ class TemplateOnesController < ApplicationController
         :header_text,
         :header_image,
         :contact_hide,
+        :header_svg,
+        :header_use_default_svg,
+        :header_use_default_image,
 
         :action_hide,
         :action_text_1,

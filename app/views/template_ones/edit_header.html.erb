@@ -7,10 +7,14 @@
 
 
   <div class="form-inputs">
-    <% f.input :header_hide %>
-    <% f.input :header_title%>
-    <% f.input :header_text %>
-    <% f.input :header_image, as: :file %>        
+    <%= f.input :header_title%>
+    <%= f.input :header_text %>
+    <%= f.input :header_use_default_image, label: 'Use Template Default Image?' %>
+    <label>Upload Custom Image</label>
+    <%= f.input :header_image, as: :file, label: false %>  
+    <%= f.input :header_use_default_svg, label: 'Use Template SVG Image?' %>
+    <label>Upload Custom SVG</label>
+    <%= f.input :header_svg, as: :file, label: false %>  
   </div>
 
   <div class="form-actions">
@@ -19,3 +23,4 @@
   </div>
 <% end %>
 </div>
+<br><br><br><br><br><br><br><br>

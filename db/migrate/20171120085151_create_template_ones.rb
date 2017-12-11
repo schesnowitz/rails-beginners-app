@@ -47,6 +47,9 @@ class CreateTemplateOnes < ActiveRecord::Migration[5.1]
       t.string :header_title 
       t.string :header_text
       t.string :header_image
+      t.string :header_svg
+      t.boolean :header_use_default_svg
+      t.boolean :header_use_default_image
       t.boolean :contact_hide
       t.boolean :action_hide
       t.string :action_text_1
