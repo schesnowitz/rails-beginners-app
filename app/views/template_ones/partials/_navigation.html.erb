@@ -29,10 +29,11 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#work">Work</a>
         </li>
+      <% if @template_one.contact_hide == false %>  
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
         </li>
-
+      <% end %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Account <span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="download">

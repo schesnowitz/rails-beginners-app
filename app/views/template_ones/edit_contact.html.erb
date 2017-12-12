@@ -7,10 +7,23 @@
 
 
   <div class="form-inputs">
-    <% f.input :contact_hide %>
-    <% f.input :contact_title %>
-    <% f.input :contact_text %>
-       
+    <%= f.input :contact_hide, label: 'Hide this module?' %>
+    <%= f.input :contact_title %>
+    <%= f.input :contact_text %>
+
+    <%= f.input :email_address_1 %>
+    <%= f.input :email_address_2 %>
+    <%= f.input :email_address_3 %>
+
+    <%= f.input :contact_sender_hide_name %>   
+    <%= f.input :contact_sender_name %> 
+    <%= f.input :contact_sender_hide_email %> 
+    <%= f.input :contact_sender_email %>
+    <%= f.input :contact_sender_hide_phone %>
+    <%= f.input :contact_sender_phone %>
+    <%= f.input :contact_sender_hide_message %>
+    <%= f.input :contact_sender_message %>
+
   </div>
 
   <div class="form-actions">
@@ -19,3 +32,4 @@
   </div>
 <% end %>
 </div>
+<br><br><br><br><br><br>

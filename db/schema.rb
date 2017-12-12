@@ -110,6 +110,19 @@ ActiveRecord::Schema.define(version: 20171208040745) do
     t.boolean "header_use_default_svg"
     t.boolean "header_use_default_image"
     t.boolean "contact_hide"
+    t.string "contact_title"
+    t.string "contact_text"
+    t.boolean "contact_sender_hide_name"
+    t.string "contact_sender_name"
+    t.boolean "contact_sender_hide_email"
+    t.string "contact_sender_email"
+    t.boolean "contact_sender_hide_phone"
+    t.string "contact_sender_phone"
+    t.boolean "contact_sender_hide_message"
+    t.string "contact_sender_message"
+    t.string "email_address_1"
+    t.string "email_address_2"
+    t.string "email_address_3"
     t.boolean "action_hide"
     t.string "action_text_1"
     t.string "action_text_2"
@@ -131,6 +144,7 @@ ActiveRecord::Schema.define(version: 20171208040745) do
     t.boolean "navigation_hide"
     t.string "navigation_title"
     t.boolean "newsletter_hide"
+    t.string "newsletter_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

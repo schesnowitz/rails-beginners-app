@@ -171,6 +171,20 @@ class TemplateOnesController < ApplicationController
         :header_text,
         :header_image,
         :contact_hide,
+        :contact_title,
+        :contact_text,
+        :contact_sender_hide_name,  
+        :contact_sender_name,
+        :contact_sender_hide_email,
+        :contact_sender_email,
+        :contact_sender_hide_phone,
+        :contact_sender_phone,
+        :contact_sender_hide_message,
+        :contact_sender_message,
+        
+        :email_address_1, 
+        :email_address_2, 
+        :email_address_3, 
         :header_svg,
         :header_use_default_svg,
         :header_use_default_image,
@@ -202,7 +216,8 @@ class TemplateOnesController < ApplicationController
         :navigation_hide,
         :navigation_title,
 
-        :newsletter_hide
+        :newsletter_hide,
+        :newsletter_title
 
         )
     end

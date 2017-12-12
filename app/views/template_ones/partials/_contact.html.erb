@@ -1,10 +1,11 @@
-    <!-- Contact Section -->
+    <% if @template_one.contact_hide == false %>
+        <!-- Contact Section -->
     <section class="page-section" id="contact">
       <div class="container wow fadeIn">
         <div class="text-center">
-          <h2>Contact Us</h2>
+          <h2><%= @template_one.contact_title %></h2>
           <hr class="colored">
-          <p>Please tell us about your next project and we will let you know what we can do to help you.</p>
+          <p><%= @template_one.contact_text %></p>
         </div>
         <div class="row mt-4">
           <div class="col-lg-8 mx-auto">
@@ -49,4 +50,5 @@
         </div>
       </div>
     </section>
-        <%= link_to "Edit Contact", edit_contact_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
+    <% end %>
+    <%= link_to "Edit Contact", edit_contact_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 

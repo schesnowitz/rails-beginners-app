@@ -101,7 +101,10 @@ t1 = TemplateOne.create!(
   action_image: '',
   portfolio_header_title: 'portfolio_header_title',
   portfolio_header_text: 'portfolio_header_text',
-  navigation_title: "CHESNOWITZ" 
+  navigation_title: "CHESNOWITZ",
+  contact_title: 'contact_title',
+  contact_text: 'contact_text',
+  newsletter_title: 'newsletter_title' 
   
 )
 puts t1.inspect
