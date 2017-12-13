@@ -26,9 +26,11 @@
           <a class="nav-link js-scroll-trigger" href="#process">Process</a>
         </li>
       <% end %>
+      <% if @template_one.portfolio_header_hide == false %> 
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#work">Work</a>
         </li>
+      <% end %>  
       <% if @template_one.contact_hide == false %>  
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>

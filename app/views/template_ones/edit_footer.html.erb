@@ -1,19 +1,85 @@
 <%= render 'template_ones/edit_partials/footer' %> 
-
-
-<div class='container'> 
-<%= bootstrap_flash %>  
-<%= simple_form_for(@template_one) do |f| %>
-
-
-  <div class="form-inputs">
-    <%= f.input :footer_hide, label: "Hide this module on main page?" %> 
-    
+<div class='container'>
+  <%= bootstrap_flash %>  
+  <%= simple_form_for(@template_one) do |f| %>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5>Telephone</h5>
+      <%= f.input :footer_hide, h5: "Hide this module on main page?" %> 
+      <%= f.input :footer_hide_telephone, h5: "Hide Telephone info?" %>
+      <%= f.input :footer_icon_telephone, collection: TemplateOne::FA_ICONS, include_blank: false %>
+      <%= f.input :footer_telephone_title %>
+      <%= f.input :footer_telephone_number %>
+      <h6>Background Image</h6>
+      <%= f.input :footer_use_default_image, h5: "Use the footer default image?" %>
+      <h6>Add a Custom Image(1500 X 798)</h6>
+      <%= f.input :footer_image %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Address</h5>
+      <%= f.input :footer_hide_address, h5: "Hide Address info?" %>
+      <%= f.input :footer_icon_address, collection: TemplateOne::FA_ICONS, include_blank: false %>
+      <%= f.input :footer_address_title %>
+      <%= f.input :footer_address_street %>
+      <%= f.input :footer_address_city %>
+      <%= f.input :footer_address_state %>
+      <%= f.input :footer_address_postal_code %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Email</h5>
+      <%= f.input :footer_hide_email, h5: "Hide Email info?" %>
+      <%= f.input :footer_icon_email, collection: TemplateOne::FA_ICONS, include_blank: false %>
+      <%= f.input :footer_email_title %>
+      <%= f.input :footer_email_address %>
+    </div>
   </div>
-
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5>Socal Link 1</h5>
+      <%= f.input :footer_hide_social_1, h5: "Hide this from the view?" %> 
+      <%= f.input :footer_social_icon_1, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_1, h5: "Set link: 'example.com'" %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Socal Link 2</h5>
+      <%= f.input :footer_hide_social_2, h5: "Hide this from the view?" %>
+      <%= f.input :footer_social_icon_2, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_2, h5: "Set link: 'example.com'" %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Socal Link 3</h5>
+      <%= f.input :footer_hide_social_3, h5: "Hide this from the view?" %>
+      <%= f.input :footer_social_icon_3, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_3, h5: "Set link: 'example.com'" %>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5>Socal Link 4</h5>
+      <%= f.input :footer_hide_social_4, h5: "Hide this from the view?" %>
+      <%= f.input :footer_social_icon_4, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_4, h5: "Set link: 'example.com'" %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Socal Link 5</h5>
+      <%= f.input :footer_hide_social_5, h5: "Hide this from the view?" %>
+      <%= f.input :footer_social_icon_5, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_5, h5: "Set link: 'example.com'" %>
+    </div>
+    <div class="col-sm-4">
+      <h5>Socal Link 6</h5>
+      <%= f.input :footer_hide_social_6, h5: "Hide this from the view?" %>
+      <%= f.input :footer_social_icon_6, collection: TemplateOne::FA_BRAND_ICONS, include_blank: false %>
+      <%= f.input :footer_social_url_6, h5: "Set link: 'example.com'" %> 
+    </div>
+  </div>
   <div class="form-actions">
     <%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
-     | <%= link_to "Home", root_path, class: "btn btn-default" %> 
+    | <%= link_to "Home", root_path, class: "btn btn-default" %> 
   </div>
-<% end %>
+  <% end %>
 </div>
+<hr>

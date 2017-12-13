@@ -212,6 +212,41 @@ class TemplateOnesController < ApplicationController
         :portfolio_grid_hide,
 
         :footer_hide,
+        :footer_hide_telephone,
+        :footer_icon_telephone,
+        :footer_telephone_title,
+        :footer_telephone_number,
+        :footer_hide_address,
+        :footer_icon_address,
+        :footer_address_title,
+        :footer_address_street,
+        :footer_address_city,
+        :footer_address_state,
+        :footer_address_postal_code,
+        :footer_hide_email,
+        :footer_icon_email,
+        :footer_email_title,
+        :footer_email_address,
+        :footer_hide_social_1, 
+        :footer_social_icon_1,
+        :footer_social_url_1,
+        :footer_hide_social_2,
+        :footer_social_icon_2,
+        :footer_social_url_2,
+        :footer_hide_social_3,
+        :footer_social_icon_3,
+        :footer_social_url_3,
+        :footer_hide_social_4,
+        :footer_social_icon_4,
+        :footer_social_url_4,
+        :footer_hide_social_5,
+        :footer_social_icon_5,
+        :footer_social_url_5,
+        :footer_hide_social_6,
+        :footer_social_icon_6,
+        :footer_social_url_6,
+        :footer_use_default_image,
+        :footer_image,
 
         :navigation_hide,
         :navigation_title,
@@ -222,5 +257,6 @@ class TemplateOnesController < ApplicationController
         )
     end
 end
+
 
 

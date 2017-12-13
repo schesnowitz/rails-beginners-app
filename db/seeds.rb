@@ -104,7 +104,33 @@ t1 = TemplateOne.create!(
   navigation_title: "CHESNOWITZ",
   contact_title: 'contact_title',
   contact_text: 'contact_text',
-  newsletter_title: 'newsletter_title' 
+  newsletter_title: 'newsletter_title',
+
+  footer_icon_telephone: "fa fa-code",
+  footer_telephone_title: "footer_telephone_title",
+  footer_telephone_number: "footer_telephone_number",
+  footer_icon_address: "fa fa-code",
+  footer_address_title: "footer_address_title",
+  footer_address_street: "footer_address_street",
+  footer_address_city: "footer_address_city",
+  footer_address_state: "footer_address_state",
+  footer_address_postal_code: "postal_code",
+  footer_icon_email: "fa fa-code",
+  footer_email_title: "footer_email_title",
+  footer_email_address: "email_address",
+  footer_social_icon_1: "fa fa-code",
+  footer_social_url_1: "url_1",
+  footer_social_icon_2: "fa fa-code",
+  footer_social_url_2: "url_2",
+  footer_social_icon_3: "fa fa-code",
+  footer_social_url_3: "url_3",
+  footer_social_icon_4: "fa fa-code",
+  footer_social_url_4: "url_4",
+  footer_social_icon_5: "fa fa-code",
+  footer_social_url_5: "url_5",
+  footer_social_icon_6: "fa fa-code",
+  footer_social_url_6: "url_6",
+  footer_image: ""
   
 )
 puts t1.inspect
