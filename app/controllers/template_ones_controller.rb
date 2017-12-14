@@ -1,7 +1,8 @@
 class TemplateOnesController < ApplicationController
   before_action :set_template_one, only: [:show, :edit, :update, :destroy, :edit_about, :edit_services, :edit_process, :edit_header, :edit_contact, :edit_action, :edit_testimonial, :edit_portfolio_carousel, :edit_portfolio_carousel_heading, :edit_portfolio_grid, :edit_footer, :edit_navigation, :edit_newsletter] 
   before_action :authenticate_user!, except: [:show]
-  before_action :not_admin_user, only: [:edit, :update, :destroy, :index]
+  
+  before_action :not_admin_user, only: [:edit, :update, :destroy, :index, :edit_about, :edit_services, :edit_process, :edit_header, :edit_contact, :edit_action, :edit_testimonial, :edit_portfolio_carousel, :edit_portfolio_carousel_heading, :edit_portfolio_grid, :edit_footer, :edit_navigation, :edit_newsletter]
   layout 'template_ones' 
   # GET /template_ones
   # GET /template_ones.json
