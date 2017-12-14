@@ -5,8 +5,9 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Created At</th>
       <th>Body</th>
-      <th>User</th>
+      <th>Username</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,8 +16,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
+        <td>about <%= time_ago_in_words(post.created_at) %> ago</td>
         <td><%= post.body %></td>
-        <td><%= post.user_id %></td>
+        <td><%= post.user.username %></td>
         <td><%= link_to 'Show', post %></td>
         <% if post.user == current_user %> 
         <td><%= link_to 'Edit', edit_post_path(post) %></td>

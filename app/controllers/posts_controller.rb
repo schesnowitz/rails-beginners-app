@@ -5,12 +5,13 @@ class PostsController < ApplicationController
 
   
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+
   end
 
   # GET /posts/new
