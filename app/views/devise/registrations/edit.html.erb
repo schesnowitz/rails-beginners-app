@@ -14,12 +14,12 @@
     <% if @user.image.present? %>
     <%= image_tag @user.image_url(:thumb), class: 'rounded-circle' %>
     <% else %>
-    <%= image_tag 'no_image', class: 'rounded-circle' %>
+    <%= image_tag 'no_image.png', class: 'rounded-circle' %>
     <% end %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+    <% end %> 
 
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
