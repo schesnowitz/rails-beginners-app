@@ -3,8 +3,8 @@
   <% if comment.user.image.present? %>
   <%= image_tag comment.user.image_url(:thumb), class: 'rounded-circle' %>
   <% else %>
-  <%= image_tag 'no_image', class: 'rounded-circle' %>
-  <% end %>
+  <%= image_tag 'no_image.png', class: 'rounded-circle' %>
+  <% end %> 
   <h6><%= comment.user.username %></h6> 
   Posted <%= time_ago_in_words(comment.created_at)  %> ago <br>
 

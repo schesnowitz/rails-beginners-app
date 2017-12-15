@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  database: production
+  database: chesnowitz_production

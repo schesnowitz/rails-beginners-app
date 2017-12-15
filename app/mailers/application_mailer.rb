@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'udemyapprails@gmail.com'
+  default from: '"Udemy Rails App" <udemyapprails@gmail.com>'
   layout 'mailer'
 end

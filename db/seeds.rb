@@ -23,23 +23,23 @@ user2 = User.create!(
 puts user2.inspect
 
 
-50.times do
-  post = Post.create!(
-    title: Faker::Coffee.blend_name,
-    body: Faker::Coffee.notes,
-    user_id: rand(1..2)
-  )
-  puts post.inspect
-end
+# 50.times do
+#   post = Post.create!(
+#     title: Faker::Coffee.blend_name,
+#     body: Faker::Coffee.notes,
+#     user_id: rand(1..2)
+#   )
+#   puts post.inspect
+# end
 
-500.times do
-  comment = Comment.create!(
-    body: Faker::Lorem.paragraph,
-    post_id: rand(1..50),
-    user_id: rand(1..2)
-  )
-  puts comment.inspect
-end
+# 500.times do
+#   comment = Comment.create!(
+#     body: Faker::Lorem.paragraph,
+#     post_id: rand(1..50),
+#     user_id: rand(1..2)
+#   )
+#   puts comment.inspect
+# end
 
 
 app_setting = AppSetting.create!(
