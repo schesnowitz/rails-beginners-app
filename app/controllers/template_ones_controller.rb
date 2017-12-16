@@ -18,6 +18,7 @@ class TemplateOnesController < ApplicationController
       redirect_to posts_path 
     end
     @projects = Project.all
+    @incoming_contact = IncomingContact.new 
   end
 
   # GET /template_ones/new

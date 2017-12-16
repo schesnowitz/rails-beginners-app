@@ -59,4 +59,14 @@
       </div>
     </section>
     <% end %>
+  <%= simple_form_for @incoming_contact do |ic| %>
+
+    <%= ic.input :name %>
+    <%= ic.input :email %>
+    <%= ic.input :phone %>
+    <%= ic.input :message %>
+    <%= ic.submit %>
+  <% end %>
+
+ 
     <%= link_to "Edit Contact", edit_contact_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 

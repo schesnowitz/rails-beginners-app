@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :app_settings
+
 
   devise_for :users, controllers: { registrations: 'user_registrations/registrations'}
   
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-
+ 
   resources :incoming_contacts
 
   root to: 'template_ones#show'
