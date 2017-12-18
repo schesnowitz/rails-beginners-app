@@ -202,7 +202,7 @@ class TemplateOnesController < ApplicationController
         :action_use_default_image,
         :action_image, 
 
-        :tesimonial_hide,
+        :testimonial_hide,
 
         :portfolio_carousel_hide,
 
