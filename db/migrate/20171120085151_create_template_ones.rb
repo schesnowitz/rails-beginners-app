@@ -49,7 +49,7 @@ class CreateTemplateOnes < ActiveRecord::Migration[5.1]
       t.string :header_image
       t.boolean :contact_hide
       t.boolean :action_hide
-      t.boolean :tesimonial_hide
+      t.boolean :testimonial_hide
       t.boolean :portfolio_carousel_hide
       t.boolean :portfolio_carousel_heading_hide
       t.boolean :portfolio_grid_hide
