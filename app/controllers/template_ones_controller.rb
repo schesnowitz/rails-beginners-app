@@ -83,6 +83,7 @@ class TemplateOnesController < ApplicationController
   end
 
   def edit_contact
+    @incoming_contact = IncomingContact.new 
   end
 
   def edit_action 
