@@ -214,8 +214,9 @@ class TemplateOnesController < ApplicationController
         :portfolio_header_hide,
         :portfolio_header_title,
         :portfolio_header_text,
-
         :portfolio_grid_hide,
+        :portfolio_grid_title,
+        :portfolio_grid_text,
 
         :footer_hide,
         :footer_hide_telephone,

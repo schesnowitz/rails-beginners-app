@@ -1,3 +1,4 @@
+ <% if @template_one.portfolio_grid_hide == false %>
  <!-- Portfolio Grid Section -->
     <section class="page-section">
       <div class="container text-center wow fadeIn">
@@ -141,4 +142,5 @@
         </div>
       </div>
     </section>
-        <%= link_to "Edit Portfolio Grid", edit_portfolio_grid_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
+    <% end %>
+<%= link_to "Edit Portfolio Grid", edit_portfolio_grid_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 

@@ -192,6 +192,8 @@ ActiveRecord::Schema.define(version: 20171219055649) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "testimonial_count"
+    t.string "portfolio_grid_title"
+    t.string "portfolio_grid_text"
   end
 
   create_table "users", force: :cascade do |t|
