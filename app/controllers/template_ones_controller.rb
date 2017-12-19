@@ -19,7 +19,7 @@ class TemplateOnesController < ApplicationController
     end
     @projects = Project.all
     @incoming_contact = IncomingContact.new 
-    @posts = Post.last(10)
+    @posts = Post.last(@template_one.testimonial_count).reverse  
   end
 
   # GET /template_ones/new
@@ -89,9 +89,9 @@ class TemplateOnesController < ApplicationController
 
   def edit_action 
   end
-
-  def edit_testimonial
-    @posts = Post.last(5)
+ 
+  def edit_testimonial 
+    @posts = Post.last(@template_one.testimonial_count).reverse
   end
 
   def edit_portfolio_carousel
@@ -207,6 +207,7 @@ class TemplateOnesController < ApplicationController
         :action_image, 
 
         :testimonial_hide,
+        :testimonial_count,
 
         :portfolio_carousel_hide,
 

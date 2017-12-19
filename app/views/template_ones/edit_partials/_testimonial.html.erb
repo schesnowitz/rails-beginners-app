@@ -1,39 +1,32 @@
 <!-- Testomonials Section -->
-
-    <section class="page-section testimonials bg-light">
-      <div class="container wow fadeIn">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <div class="testimonials-carousel">
-              <!-- Testimonial Item 1 -->
-<% @posts.each do |post| %>
-
-
-
-
-              <div class="item mb-4">
-                <p class="lead"><%= post.title %></p>
-                <hr class="colored">
-                <p><%= post.body %></p>
-                <div class="testimonial-img">
-                  <img class="rounded-circle img-fluid" src="<%= asset_url 'template_ones/agency/testimonials/1.jpg' %>" alt="">
-                </div>
-                <div class="testimonial-author">
-                  <span class="name"><%= post.user.username %></span>
-                  <p class="small">CEO of Company Name</p>
-                  <div class="stars">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-              </div>
-<% end %>
-             
+<section class="page-section testimonials bg-light">
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="testimonials-carousel">
+          <!-- Testimonial Item 1 -->
+          <% @posts.each do |post| %>
+          <div class="item mb-4">
+            <p class="lead"><%= post.title %></p>
+            <hr class="colored">
+            <p><%= post.body.truncate(150) %></p>
+            <% if post.user.image.present? %>  
+            <div class="testimonial-img">
+              <img class="rounded-circle img-fluid" src="<%= asset_url post.user.image_url(:thumb) if post.user.image.present? %>" alt="">
+            </div>
+            <% else %>
+            <div class="testimonial-img">
+              <img class="rounded-circle img-fluid" src="<%= asset_url 'no_image.png', class: 'rounded-circle' %>" alt="">
+            </div>
+            <% end %>
+            <div class="testimonial-author">
+              <span class="name"><%= post.user.username %></span>
+              <p class="small">posted <%= time_ago_in_words(post.created_at) %></p>
             </div>
           </div>
+          <% end %>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
