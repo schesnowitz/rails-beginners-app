@@ -9,23 +9,30 @@
           <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".identity">Identity</button>
           <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".graphic">Graphic</button>
           <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".web">Web</button>
+
+<% @template_one.grid_image_categories.each do |category| %>
+
+          <button type="button" class="control btn btn-secondary btn-sm mx-2 mb-4" data-mixitup-control data-filter=".<%= category.name %> "><%= category.name %> </button>
+<% end %>
         </div>
         <div class="portfolio-grid clearfix" id="portfolioList">
+<% @grid_images.each do |image| %>
+
 
           <!-- Grid Item 1 -->
-          <div class="mix identity" href="<%= asset_url 'template_ones/agency/portfolio/grid/grid-1.jpg' %>" title="Client Name">
+          <div class="mix <%= image.grid_image_category.name %>" href="<%= asset_url 'template_ones/agency/portfolio/grid/grid-1.jpg' %>" title="Client Name">
             <div class="portfolio-wrapper">
               <img src="<%= asset_url 'template_ones/agency/portfolio/grid/grid-1.jpg' %>" alt="">
               <div class="caption">
                 <div class="caption-text">
-                  <a class="text-title">Client Name</a>
-                  <span class="text-category">Brand Identity</span>
+                  <a class="text-title"><%= image.name %></a>
+                  <span class="text-category"><%= image.grid_image_category.name %></span>
                 </div>
                 <div class="caption-bg"></div>
               </div>
             </div>
           </div>
-
+<% end %>
         
 
         </div>

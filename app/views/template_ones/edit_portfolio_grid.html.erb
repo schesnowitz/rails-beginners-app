@@ -1,6 +1,7 @@
 <%= render 'template_ones/edit_partials/portfolio_grid' %> 
 <%= render 'template_ones/partials/static_assets/static_assets' %>
 
+
 <div class='container'> 
 <%= bootstrap_flash %>  
 <%= simple_form_for(@template_one) do |f| %>
@@ -19,3 +20,22 @@
   </div>
 <% end %>
 </div>
+<%= simple_form_for [@template_one, GridImageCategory.new] do |f| %>
+<%= f.input :name %>
+<%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+<% end %>
+<%= simple_form_for(@grid_image) do |f| %>
+<%= f.input :name %>
+
+<%= f.input :grid_image_category_id, collection: @grid_image_categories, value_method: :id, label: "Category", include_blank: false %>
+
+
+<%= f.button :submit, data: {disable_with: 'One moment please...'} %> 
+<% end %>
+
+<% @grid_images.each do |image| %>
+<%= image.name %>
+<%= image.grid_image_category.name %>
+<% end %>
+
+<br><br><br><br><br><br>

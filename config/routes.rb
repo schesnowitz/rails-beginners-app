@@ -6,8 +6,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'user_registrations/registrations'}
   
+  resources :grid_images
+  
   resources :template_ones do
     resources :projects
+    resources :grid_image_categories 
   end
 
   resources :posts do

@@ -102,6 +102,9 @@ class TemplateOnesController < ApplicationController
   end
 
   def edit_portfolio_grid
+    @grid_image_categories = GridImageCategory.all
+    @grid_image = GridImage.new
+    @grid_images = GridImage.all
   end
 
   def edit_footer
