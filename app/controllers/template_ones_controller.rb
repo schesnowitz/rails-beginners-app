@@ -19,6 +19,7 @@ class TemplateOnesController < ApplicationController
     end
     @projects = Project.all
     @incoming_contact = IncomingContact.new 
+    @posts = Post.last(10)
   end
 
   # GET /template_ones/new
@@ -90,6 +91,7 @@ class TemplateOnesController < ApplicationController
   end
 
   def edit_testimonial
+    @posts = Post.last(5)
   end
 
   def edit_portfolio_carousel
@@ -204,7 +206,7 @@ class TemplateOnesController < ApplicationController
         :action_use_default_image,
         :action_image, 
 
-        :tesimonial_hide,
+        :testimonial_hide,
 
         :portfolio_carousel_hide,
 

@@ -143,7 +143,7 @@ ActiveRecord::Schema.define(version: 20171215060407) do
     t.string "action_button_text"
     t.boolean "action_use_default_image"
     t.string "action_image"
-    t.boolean "tesimonial_hide"
+    t.boolean "testimonial_hide"
     t.boolean "portfolio_carousel_hide"
     t.boolean "portfolio_header_hide"
     t.string "portfolio_header_title"

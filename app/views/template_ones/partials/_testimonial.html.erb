@@ -1,3 +1,4 @@
+<% if @template_one.testimonial_hide == false %>
 <!-- Testomonials Section -->
     <section class="page-section testimonials bg-light">
       <div class="container wow fadeIn">
@@ -49,3 +50,5 @@
         </div>
       </div>
     </section>
+<% end %>
+    <%= link_to "Edit Latest Post Content", edit_testimonial_path, class: "btn btn-outline-info btn-sm pull-right" if current_user.try(:admin?) %> 
