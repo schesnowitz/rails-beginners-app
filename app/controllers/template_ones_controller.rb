@@ -20,6 +20,8 @@ class TemplateOnesController < ApplicationController
     @projects = Project.all
     @incoming_contact = IncomingContact.new 
     @posts = Post.last(@template_one.testimonial_count).reverse  
+    @grid_image_categories = GridImageCategory.all
+    @grid_images = GridImage.all
   end
 
   # GET /template_ones/new
@@ -102,6 +104,10 @@ class TemplateOnesController < ApplicationController
   end
 
   def edit_portfolio_grid
+    @grid_image_category = GridImageCategory.new
+    @grid_image_categories = GridImageCategory.all
+    @grid_image = GridImage.new
+    @grid_images = GridImage.all
   end
 
   def edit_footer

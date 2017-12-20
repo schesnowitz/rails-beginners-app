@@ -5,7 +5,7 @@ class TemplateOne < ApplicationRecord
   mount_uploader :header_svg, SvgFileUploader  
   mount_uploader :footer_image, FooterImageUploader   
   has_many :projects
-
+  has_many :grid_image_categories
   private
 
   FA_BRAND_ICONS = %w(

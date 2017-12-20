@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219055649) do
+ActiveRecord::Schema.define(version: 20171220044725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,24 @@ ActiveRecord::Schema.define(version: 20171219055649) do
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "grid_image_categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "template_one_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["template_one_id"], name: "index_grid_image_categories_on_template_one_id"
+  end
+
+  create_table "grid_images", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "image"
+    t.integer "grid_image_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["grid_image_category_id"], name: "index_grid_images_on_grid_image_category_id"
   end
 
   create_table "incoming_contacts", force: :cascade do |t|
