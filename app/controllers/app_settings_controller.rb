@@ -79,6 +79,6 @@ class AppSettingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def app_setting_params
-      params.require(:app_setting).permit(:tab_name, :theme_name)
+      params.require(:app_setting).permit(:tab_name, :theme_name, :front_end_color, :app_title, :app_email_1, :app_email_2, :app_email_title_1, :app_email_title_2)
     end
 end

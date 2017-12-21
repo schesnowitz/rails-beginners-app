@@ -79,6 +79,10 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+  # https://stormconsultancy.co.uk/blog/development/tips-tricks/limit-the-size-of-your-rails-test-and-development-logs/
+  
+  config.logger = ActiveSupport::Logger.new(
+    config.paths['log'].first, 1, 50 * 1024 * 1024)
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)

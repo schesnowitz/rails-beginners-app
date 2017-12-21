@@ -44,7 +44,13 @@ end
 
 app_setting = AppSetting.create!(
   theme_name: 'pulse',
-  tab_name: 'acme_app'
+  tab_name: 'acme_app',
+  front_end_color: 'red', 
+  app_title: 'Chesnowitz', 
+  app_email_1:'example@example.com', 
+  app_email_2:'example2@example.com',
+  app_email_title_1: "title goes here 1",
+  app_email_title_2: "title goes here 2"
 )
 puts app_setting.inspect
 

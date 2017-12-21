@@ -17,7 +17,27 @@
     
     <%= stylesheet_link_tag 'template_ones/manifest', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+  <% if @app_setting.front_end_color == 'red' %>
     <%= stylesheet_link_tag 'template_ones/themes/vitality-red.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'aqua' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-aqua.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'blue' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-blue.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'green' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-green.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'orange' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-orange.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'pink' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-pink.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'purple' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-purple.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <% elsif @app_setting.front_end_color == 'tan' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-tan.css', media: 'all', 'data-turbolinks-track': 'reload' %> 
+  <% elsif @app_setting.front_end_color == 'turquoise' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-turquoise.css', media: 'all', 'data-turbolinks-track': 'reload' %> 
+  <% else @app_setting.front_end_color == 'yellow' %>
+    <%= stylesheet_link_tag 'template_ones/themes/vitality-yellow.css', media: 'all', 'data-turbolinks-track': 'reload' %> 
+  <% end %>    
 
 
     <%= javascript_include_tag 'template_ones/manifest.js', 'data-turbolinks-track': 'reload' %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171220044725) do
+ActiveRecord::Schema.define(version: 20171221072047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20171220044725) do
     t.string "theme_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "front_end_color"
+    t.string "app_title"
+    t.string "app_email_1"
+    t.string "app_email_2"
+    t.string "app_email_title_1"
+    t.string "app_email_title_2"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -28,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171220044725) do
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gist_link"
   end
 
   create_table "grid_image_categories", force: :cascade do |t|

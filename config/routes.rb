@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   resources :app_settings
 
   devise_for :users, controllers: { registrations: 'user_registrations/registrations'}
-  resources :grid_images
+
+  resources :grid_images, only: [:create, :new, :destroy]
 
   resources :template_ones do
     resources :projects
-    resources :grid_image_categories
+    resources :grid_image_categories, only: [:create, :new, :destroy]
   end
 
   resources :posts do

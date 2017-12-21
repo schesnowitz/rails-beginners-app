@@ -6,6 +6,19 @@ class AppSetting < ApplicationRecord
 
   private
 
+  FRONT_END_COLOR = %w(
+    aqua
+    blue
+    green
+    orange
+    pink
+    purple
+    red
+    tan
+    turquoise
+    yellow
+  )
+
   APP_THEME = %w(  
     default
     cerulean
