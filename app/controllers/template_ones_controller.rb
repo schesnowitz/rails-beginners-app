@@ -214,19 +214,15 @@ class TemplateOnesController < ApplicationController
         :action_button_text,
         :action_use_default_image,
         :action_image, 
-
         :testimonial_hide,
         :testimonial_count,
-
         :portfolio_carousel_hide,
-
         :portfolio_header_hide,
         :portfolio_header_title,
         :portfolio_header_text,
         :portfolio_grid_hide,
         :portfolio_grid_title,
         :portfolio_grid_text,
-
         :footer_hide,
         :footer_hide_telephone,
         :footer_icon_telephone,
@@ -263,10 +259,8 @@ class TemplateOnesController < ApplicationController
         :footer_social_url_6,
         :footer_use_default_image,
         :footer_image,
-
         :navigation_hide,
         :navigation_title,
-
         :newsletter_hide,
         :newsletter_title
 

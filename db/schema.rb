@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221072047) do
+ActiveRecord::Schema.define(version: 20171220044725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,23 +18,23 @@ ActiveRecord::Schema.define(version: 20171221072047) do
   create_table "app_settings", force: :cascade do |t|
     t.string "tab_name"
     t.string "theme_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "front_end_color"
     t.string "app_title"
     t.string "app_email_1"
     t.string "app_email_2"
     t.string "app_email_title_1"
     t.string "app_email_title_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.integer "user_id"
     t.integer "post_id"
+    t.string "gist_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "gist_link"
   end
 
   create_table "grid_image_categories", force: :cascade do |t|
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "service_text_4"
     t.string "service_title_5"
     t.string "service_text_5"
-    t.boolean "process_hide"
+    t.boolean "process_hide", default: false
     t.string "main_process_title"
     t.string "main_process_title_text"
     t.string "process_icon_1"
@@ -136,28 +136,28 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "process_li_10"
     t.string "process_li_11"
     t.string "process_li_12"
-    t.boolean "header_hide"
+    t.boolean "header_hide", default: false
     t.string "header_title"
     t.string "header_text"
     t.string "header_image"
     t.string "header_svg"
-    t.boolean "header_use_default_svg"
-    t.boolean "header_use_default_image"
-    t.boolean "contact_hide"
+    t.boolean "header_use_default_svg", default: true
+    t.boolean "header_use_default_image", default: true
+    t.boolean "contact_hide", default: false
     t.string "contact_title"
     t.string "contact_text"
-    t.boolean "contact_sender_hide_name"
+    t.boolean "contact_sender_hide_name", default: false
     t.string "contact_sender_name"
-    t.boolean "contact_sender_hide_email"
+    t.boolean "contact_sender_hide_email", default: false
     t.string "contact_sender_email"
-    t.boolean "contact_sender_hide_phone"
+    t.boolean "contact_sender_hide_phone", default: false
     t.string "contact_sender_phone"
-    t.boolean "contact_sender_hide_message"
+    t.boolean "contact_sender_hide_message", default: false
     t.string "contact_sender_message"
     t.string "email_address_1"
     t.string "email_address_2"
     t.string "email_address_3"
-    t.boolean "action_hide"
+    t.boolean "action_hide", default: false
     t.string "action_text_1"
     t.string "action_text_2"
     t.string "action_text_3"
@@ -166,59 +166,59 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "action_text_6"
     t.string "action_text_7"
     t.string "action_button_text"
-    t.boolean "action_use_default_image"
+    t.boolean "action_use_default_image", default: true
     t.string "action_image"
-    t.boolean "testimonial_hide"
-    t.boolean "portfolio_carousel_hide"
-    t.boolean "portfolio_header_hide"
+    t.boolean "testimonial_hide", default: false
+    t.boolean "portfolio_carousel_hide", default: false
+    t.boolean "portfolio_header_hide", default: false
     t.string "portfolio_header_title"
     t.string "portfolio_header_text"
-    t.boolean "portfolio_grid_hide"
-    t.boolean "footer_hide"
-    t.boolean "footer_hide_telephone"
+    t.boolean "portfolio_grid_hide", default: false
+    t.boolean "footer_hide", default: false
+    t.boolean "footer_hide_telephone", default: false
     t.string "footer_icon_telephone"
-    t.string "footer_telephone_title"
+    t.string "footer_telephone_title", default: "f"
     t.string "footer_telephone_number"
-    t.boolean "footer_hide_address"
+    t.boolean "footer_hide_address", default: false
     t.string "footer_icon_address"
     t.string "footer_address_title"
     t.string "footer_address_street"
     t.string "footer_address_city"
     t.string "footer_address_state"
     t.string "footer_address_postal_code"
-    t.boolean "footer_hide_email"
+    t.boolean "footer_hide_email", default: false
     t.string "footer_icon_email"
     t.string "footer_email_title"
     t.string "footer_email_address"
-    t.boolean "footer_hide_social_1"
+    t.boolean "footer_hide_social_1", default: false
     t.string "footer_social_icon_1"
     t.string "footer_social_url_1"
-    t.boolean "footer_hide_social_2"
+    t.boolean "footer_hide_social_2", default: false
     t.string "footer_social_icon_2"
     t.string "footer_social_url_2"
-    t.boolean "footer_hide_social_3"
+    t.boolean "footer_hide_social_3", default: false
     t.string "footer_social_icon_3"
     t.string "footer_social_url_3"
-    t.boolean "footer_hide_social_4"
+    t.boolean "footer_hide_social_4", default: false
     t.string "footer_social_icon_4"
     t.string "footer_social_url_4"
-    t.boolean "footer_hide_social_5"
+    t.boolean "footer_hide_social_5", default: false
     t.string "footer_social_icon_5"
     t.string "footer_social_url_5"
-    t.boolean "footer_hide_social_6"
+    t.boolean "footer_hide_social_6", default: false
     t.string "footer_social_icon_6"
     t.string "footer_social_url_6"
-    t.boolean "footer_use_default_image"
+    t.boolean "footer_use_default_image", default: true
     t.string "footer_image"
-    t.boolean "navigation_hide"
+    t.boolean "navigation_hide", default: false
     t.string "navigation_title"
-    t.boolean "newsletter_hide"
+    t.boolean "newsletter_hide", default: false
     t.string "newsletter_title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "testimonial_count", default: 2
     t.string "portfolio_grid_title"
     t.string "portfolio_grid_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -228,6 +228,7 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "last_name"
     t.string "username"
     t.string "image"
+    t.boolean "admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -242,7 +243,6 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
