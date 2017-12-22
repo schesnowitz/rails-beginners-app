@@ -138,8 +138,7 @@ t1 = TemplateOne.create!(
   footer_social_url_6: "url_6",
   footer_image: "",
   portfolio_grid_title: 'portfolio_grid_title',
-  portfolio_grid_text: 'portfolio_grid_text',
-  testimonial_count: 5
+  portfolio_grid_text: 'portfolio_grid_text'
   
 )
 puts t1.inspect

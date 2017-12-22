@@ -216,7 +216,7 @@ ActiveRecord::Schema.define(version: 20171221072047) do
     t.string "newsletter_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "testimonial_count"
+    t.integer "testimonial_count", default: 2
     t.string "portfolio_grid_title"
     t.string "portfolio_grid_text"
   end

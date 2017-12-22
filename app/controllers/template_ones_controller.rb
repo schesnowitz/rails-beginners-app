@@ -7,6 +7,8 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones
   # GET /template_ones.json
   def index
+    flash[:danger] = "Not a valid path." 
+    redirect_back(fallback_location: root_path)
     @template_ones = TemplateOne.all
   end
 
@@ -57,7 +59,8 @@ class TemplateOnesController < ApplicationController
         format.html { redirect_back fallback_location: root_path, notice: 'Template one was successfully updated.' }
         format.json { render :show, status: :ok, location: @template_one }
       else
-        format.html { render :edit }
+        flash[:danger] = "There was a problem! " + @template_one.errors.full_messages.to_sentence
+        format.html { redirect_back(fallback_location: root_path) }
         format.json { render json: @template_one.errors, status: :unprocessable_entity }
       end
     end

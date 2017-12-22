@@ -7,7 +7,7 @@ class TemplateOne < ApplicationRecord
   has_many :projects
   has_many :grid_image_categories
   private
-
+  validates_inclusion_of :testimonial_count, in: 1..40, message: "Value must be between 1 and 40."
   FA_BRAND_ICONS = %w(
     500px
     adn
