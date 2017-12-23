@@ -1,9 +1,9 @@
 <!-- Portfolio Grid Section -->
 <section class="page-section">
   <div class="container text-center wow fadeIn">
-    <h2><%= @template_one.portfolio_grid_title %></h2>
+    <h2 id='portfolio_grid_title_show'><%= @template_one.portfolio_grid_title %></h2>
     <hr class="colored">
-    <p><%= @template_one.portfolio_grid_text %></p>
+    <p id='portfolio_grid_text_show'><%= @template_one.portfolio_grid_text %></p>
     <%= bootstrap_flash %>  
     <div class="controls mt-3">
       <% @template_one.grid_image_categories.each do |gic| %>

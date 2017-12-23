@@ -2,21 +2,23 @@
 <section class="page-section" id="contact">
   <div class="container wow fadeIn">
     <div class="text-center">
-      <h2><%= @template_one.contact_title %></h2>
+      <h2 id='contact_title_show'><%= @template_one.contact_title %></h2>
       <hr class="colored">
-      <p><%= @template_one.contact_text %></p>
+      <p id='contact_text_show'><%= @template_one.contact_text %></p>
     </div>
     <div class="row mt-4">
       <div class="col-lg-8 mx-auto">
         <%= simple_form_for @incoming_contact do |ic| %>
         <form name="sentMessage" id="contactForm" novalidate>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <label>Name</label>
-              <%= ic.input :name, label: false, placeholder: "Name" %>
-              <p class="help-block text-danger"></p>
+          <span id='hideName'>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <label>Name</label>
+                <%= ic.input :name, label: false, placeholder: "Name" %>
+                <p class="help-block text-danger"></p>
+              </div>
             </div>
-          </div>
+          </span>
           <div class="row control-group">
             <div class="form-group col-12 floating-label-form-group controls">
               <label>Email Address</label>
@@ -24,20 +26,24 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <label>Phone Number</label>
-              <%= ic.input :phone, label: false, placeholder: "Telephone" %>
-              <p class="help-block text-danger"></p>
+          <span id='hidePhone'>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <label>Phone Number</label>
+                <%= ic.input :phone, label: false, placeholder: "Telephone" %>
+                <p class="help-block text-danger"></p>
+              </div>
             </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <label>Message</label>
-              <%= ic.input :message, label: false, placeholder: "Message" %> 
-              <p class="help-block text-danger"></p>
+          </span>
+          <span id='hideMessage'>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <label>Message</label>
+                <%= ic.input :message, label: false, placeholder: "Message" %> 
+                <p class="help-block text-danger"></p>
+              </div>
             </div>
-          </div>
+          </span>
           <br>
           <div id="success"></div>
           <div class="row">
