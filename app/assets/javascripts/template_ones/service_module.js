@@ -1,5 +1,5 @@
 $(document).ready(function() { 
-
+  document.addEventListener("turbolinks:load", function() {
    $('#template_one_service_icon_1').change(function(e) {
     $('#service_icon_1_input').removeClass().addClass('fa fa-' + this.value + ' fa-2x');
    });
@@ -72,3 +72,4 @@ $(document).ready(function() {
     $('#service_text_5_show').html($(this).val());
    });
   });
+});

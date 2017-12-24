@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+  document.addEventListener("turbolinks:load", function() {
    $('#template_one_footer_hide_telephone').click(function() {
     if ($(this).is(':checked')) {
      $("#hideTele").hide();
@@ -252,3 +252,4 @@ $(document).ready(function() {
     $('#footer_social_icon_6_show').removeClass().addClass('fa fa-' + this.value + ' fa-fw fa-2x');
    });
   });
+});

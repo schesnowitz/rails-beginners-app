@@ -43,3 +43,4 @@ Rails.application.config.assets.precompile += %w( template_ones/themes/vitality-
 Rails.application.config.assets.precompile += %w( template_ones/themes/vitality-tan.css )
 Rails.application.config.assets.precompile += %w( template_ones/themes/vitality-turquoise.css )
 Rails.application.config.assets.precompile += %w( template_ones/themes/vitality-yellow.css )
+

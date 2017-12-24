@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+  document.addEventListener("turbolinks:load", function() {
    $('#template_one_process_icon_1').change(function(e) {
     $('#process_icon_1_show').removeClass().addClass('fa fa-' + this.value + ' rounded-circle');
    });
@@ -92,3 +92,4 @@ $(document).ready(function() {
     $('#process_li_12_show').html($(this).val());
    });
   });
+});
