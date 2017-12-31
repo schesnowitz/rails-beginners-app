@@ -18,7 +18,7 @@
   
 
 <% if current_user == comment.user %>   
-<%= link_to 'Edit Comment', edit_post_comment_path(comment.post, comment), class: 'btn btn-outline-info btn-sm' %> 
-<%= link_to 'Delete', [comment.post, comment], method: :delete, data: {confirm: "This can't be undone!" }, class: 'btn btn-danger btn-sm'%>
+<%= link_to 'Edit Comment', edit_course_post_comment_path(@course, comment.post, comment), class: 'btn btn-outline-info btn-sm' %> 
+<%= link_to 'Delete', [@course, comment.post, comment], method: :delete, data: {confirm: "This can't be undone!" }, class: 'btn btn-danger btn-sm'%>
 <% end %>
                 

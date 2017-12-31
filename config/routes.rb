@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+  resources :courses do
+    resources :posts do
+      resources :comments
+    end
+  end
+
   resources :app_settings
 
   devise_for :users, controllers: { registrations: 'user_registrations/registrations'}
@@ -13,9 +19,8 @@ Rails.application.routes.draw do
     resources :grid_image_categories, only: [:create, :new, :destroy]
   end
 
-  resources :posts do
-    resources :comments
-  end
+
+
  
   resources :incoming_contacts
 
