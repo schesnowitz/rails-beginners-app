@@ -6,9 +6,7 @@
   <%= image_tag 'no_image.png', class: 'rounded-circle' %>
   <% end %> 
   <h6><%= comment.user.username %></h6> 
-  Posted <%= time_ago_in_words(comment.created_at)  %> ago <br>
-
-  <%= comment.body %>
+   <%= comment.body %>
 
 </p>
 <p> 
@@ -22,3 +20,20 @@
 <%= link_to 'Delete', [@course, comment.post, comment], method: :delete, data: {confirm: "This can't be undone!" }, class: 'btn btn-danger btn-sm'%>
 <% end %>
                 
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+//Check if the current URL contains '#' 
+if(document.URL.indexOf("#")==-1)
+{
+// Set the URL to whatever it was plus "#".
+url = document.URL+"#";
+location = "#";
+
+//Reload the page
+location.reload(true);
+
+}
+});
+</script> 

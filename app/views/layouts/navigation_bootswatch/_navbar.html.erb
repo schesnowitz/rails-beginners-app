@@ -33,7 +33,7 @@
 
           <div class="dropdown-menu" aria-labelledby="download">
           <% Course.all.each do |course| %>
-           <span class='dropdown-item'><%= link_to course.name, course_path(course) %></span> 
+           <span class='dropdown-item'><%= link_to course.name, course_posts_path(course) %></span> 
             <div class="dropdown-divider"></div>
 <% end %>    
            </div>

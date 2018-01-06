@@ -7,20 +7,25 @@
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <h3>Video Title:</h3>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Description:</strong>
   <%= @post.body %>
 </p>
-<p>Comments</p>
+<p>Notes</p>
 <%= render @post.comments.order(created_at: :desc ) %> 
+<% if current_user.try(:adnin?) %>
 <p>
   <strong>Add Comment:</strong>
   <%= render 'comments/form' %> 
 </p>
 
-<%= link_to 'Edit', edit_course_post_comment_path(@course, @post.comments) if @post.user == current_user %> |
-<%= link_to 'Back', course_post_comment_path(@course, @post ) %>
+<% end %>
+
+<%= link_to 'Edit', edit_course_post_comment_path(@course, @post.comments) if @post.user == current_user %>
+<%= link_to 'Back', course_path(@course), class: "btn btn-outline-warning" %>
+
+

@@ -17,7 +17,7 @@ class TemplateOnesController < ApplicationController
   def show
     # if current_user and not current_user.try(:admin?)
     if current_user && !current_user.try(:admin?)
-      redirect_to posts_path 
+      redirect_to courses_path 
     end
     @projects = Project.all
     @incoming_contact = IncomingContact.new 

@@ -1,3 +1,5 @@
+
+
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
@@ -24,3 +26,4 @@
 
 //= require template_ones/js/contact_me.js
 //= require template_ones/js/jqBootstrapValidation.js
+

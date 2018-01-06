@@ -14,16 +14,19 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
+    not_admin_user
     @course = Course.new
   end
 
   # GET /courses/1/edit
   def edit
+    not_admin_user
   end
 
   # POST /courses
   # POST /courses.json
   def create
+    not_admin_user
     @course = Course.new(course_params)
 
     respond_to do |format|
@@ -40,6 +43,7 @@ class CoursesController < ApplicationController
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
+    not_admin_user
     respond_to do |format|
       if @course.update(course_params)
         format.html { redirect_to @course, notice: 'Course was successfully updated.' }
@@ -54,6 +58,7 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
+    not_admin_user
     @course.destroy
     respond_to do |format|
       format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
@@ -66,7 +71,13 @@ class CoursesController < ApplicationController
     def set_course
       @course = Course.find(params[:id])
     end
-
+    
+    def not_admin_user
+      if !current_user.try(:admin?)
+        flash[:danger] = "This resource is not available."
+        redirect_to root_path
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
       params.require(:course).permit(:name)

@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
         flash[:success] = "The comment has been saved."
         redirect_to course_post_path(@course, @post)
       else
-        redirect_to post_path(@post)
+        redirect_to course_post_path(@course, @post)
         flash[:danger] = "#{@user.first_name}, We have these errors: " + @comment.errors.full_messages.to_sentence 
       end
     end 
