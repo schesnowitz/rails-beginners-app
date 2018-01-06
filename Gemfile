@@ -24,7 +24,7 @@ gem 'sidekiq'
 gem 'redis' 
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'mini_magick', '~> 4.8'
-gem "fog-aws"
+
 
 
 group :development, :test do
