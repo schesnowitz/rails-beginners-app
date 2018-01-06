@@ -2,25 +2,25 @@
 
 user = User.create!(
 email: 'steve@chesnowitz.com',
-password: 'password',
-password_confirmation: 'password',
+password: 'kati1991',
+password_confirmation: 'kati1991',
 first_name: 'Steve',
 last_name: 'Chesnowitz',
-username: 'Steve-O',
+username: 'Steve',
 admin: true
 )
 puts user.inspect
 
 
-user2 = User.create!(
-  email: 's.chesnowitz@gmail.com',
-  password: 'password',
-  password_confirmation: 'password',
-  first_name: 'Layla',
-  last_name: 'Chesnowitz',
-  username: 'Layla Cookie'
-  )
-puts user2.inspect
+# user2 = User.create!(
+#   email: 's.chesnowitz@gmail.com',
+#   password: 'password',
+#   password_confirmation: 'password',
+#   first_name: 'Layla',
+#   last_name: 'Chesnowitz',
+#   username: 'Layla Cookie'
+#   )
+# puts user2.inspect
 
 
 # 50.times do
@@ -44,12 +44,12 @@ puts user2.inspect
 
 app_setting = AppSetting.create!(
   theme_name: 'pulse',
-  tab_name: 'acme_app',
+  tab_name: 'chesnowitz',
   front_end_color: 'red', 
   app_title: 'Chesnowitz', 
-  app_email_1:'example@example.com', 
+  app_email_1:'udemyrailsapp@gmail.com', 
   app_email_2:'example2@example.com',
-  app_email_title_1: "title goes here 1",
+  app_email_title_1: "Send A Email!",
   app_email_title_2: "title goes here 2"
 )
 puts app_setting.inspect

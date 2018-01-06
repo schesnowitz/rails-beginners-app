@@ -6,8 +6,8 @@
   <div class="container h-100">
     <div class="row h-100">
       <div class="col-12 my-auto text-center text-white">
-        <% if @template_one.header_use_default_svg == true || !@template_one.header_svg.present? %>
-        <img class="masthead-img img-fluid mb-3" src="<%= asset_url 'template_ones/creative/profile.svg' %>" alt=""> 
+        <% if @template_one.header_use_default_svg == true  %>
+        <img class="masthead-img img-fluid mb-3" src="<% asset_url 'template_ones/creative/profile.svg' %>" alt=""> 
         <% else %>
         <img class="masthead-img img-fluid mb-3" src="<%= asset_url @template_one.header_svg if @template_one.header_svg.present? %>" alt="">   
         <% end %>
