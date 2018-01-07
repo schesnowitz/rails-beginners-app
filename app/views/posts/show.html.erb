@@ -7,25 +7,20 @@
   <% image_tag 'no_image.png', class: 'rounded-circle' %>
   <% end %>
 </p>
-
 <div class="card text-center">
   <div class="card-header">
     Section: <%= @post.section_number %>
-        <span class="badge badge-primary">Lecture Number: <%= @post.lecture_number %></span> 
+    <span class="badge badge-primary">Lecture Number: <%= @post.lecture_number %></span> 
   </div>
   <div class="card-block">
     <h4 class="card-title"><%= @post.title %></h4>
     <p class="card-text"></p>
-
   </div>
   <div class="card-footer text-muted">
     <%= @post.section_name %>
   </div>
 </div>
-
-
- <%= @post.body.html_safe %>
-
+<%= @post.body.html_safe %>
 <p>.....</p>
 <%= render @post.comments.order(created_at: :desc ) %> 
 <p>
@@ -41,6 +36,3 @@
 <% end %> 
 <%= link_to 'Course Index', course_path(@course), class: 'btn btn-outline-secondary' %>
 <br><br><br><br>
-
-
-
