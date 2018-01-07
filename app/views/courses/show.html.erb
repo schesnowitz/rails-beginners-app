@@ -1,3 +1,4 @@
+
 <br><br>
 <h2><%= @course.name %></h2>
 <br>
@@ -5,20 +6,27 @@
 <table class="table table-bordered table-condensed table-responsive">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+
+                    <th>Section Name</th>
+                          <th>Section Number</th>
+      <th>Lecture Number</th>
+      <th>Video Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
     <% @course.posts.each do |post| %>
     <tr>
+        <td><%= post.section_name %></td>
+    <td>        <span class="badge badge-info"><%= post.section_number %></span></td>
+
+
+    <td>        <span class="badge badge-primary"><%= post.lecture_number %></span></td>
     <td>
     <%= link_to course_post_path(@course, post) do %>
       <%= post.title %>
     <% end %>
     </td>
-      <td><%= post.body.html_safe %></td>
       <td><%= link_to 'Show', course_post_path(@course, post), class: "btn btn-outline-success btn-sm" %></td>
       <% if current_user.try(:admin?) %>
       <td>
