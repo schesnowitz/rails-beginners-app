@@ -17,6 +17,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    not_administrator
     @course = Course.find(params[:course_id]) 
     @post = current_user.posts.build
 
@@ -24,13 +25,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    not_administrator
     @course = Course.find(params[:course_id]) 
   end
 
   # POST /posts
   # POST /posts.json
   def create
-
+    not_administrator
     @post = current_user.posts.build(post_params) 
     @course = Course.find(params[:course_id]) 
     @user = current_user
@@ -49,6 +51,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    not_administrator
     @post = current_user.posts.build(post_params) 
     @course = Course.find(params[:course_id]) 
     @user = current_user
@@ -67,6 +70,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    not_administrator
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }

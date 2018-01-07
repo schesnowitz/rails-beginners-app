@@ -1,26 +1,33 @@
+<br>
+<%= link_to 'Course Index', course_path(@course), class: 'btn btn-outline-secondary' %>
 <p>
-    <% if @post.user.image.present? %>
-    <%= image_tag @post.user.image_url(:thumb), class: 'rounded-circle' %>
-    <% else %>
-    <%= image_tag 'no_image.png', class: 'rounded-circle' %>
-    <% end %>
+  <% if @post.user.image.present? %>
+  <% image_tag @post.user.image_url(:thumb), class: 'rounded-circle' %>
+  <% else %>
+  <% image_tag 'no_image.png', class: 'rounded-circle' %>
+  <% end %>
+</p>
+<p>
+<h3><%= @post.title %></h3>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+ <%= @post.body.html_safe %>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-<p>Comments</p>
+<p>.....</p>
 <%= render @post.comments.order(created_at: :desc ) %> 
 <p>
-  <strong>Add Comment:</strong>
-  <%= render 'comments/form' %> 
+  <% if current_user.try(:admin?) %> 
+  <br>
+<hr>
+<strong>Add Comment:</strong>
+<br>
+<hr>
+<%= render 'comments/form' %> 
 </p>
+<% link_to 'Edit', edit_course_post_comment_path(@course, @post.comments) if @post.user == current_user %> 
+<% end %> 
+<%= link_to 'Course Index', course_path(@course), class: 'btn btn-outline-secondary' %>
+<br><br><br><br>
 
-<%= link_to 'Edit', edit_course_post_comment_path(@course, @post.comments) if @post.user == current_user %> |
-<%= link_to 'Back', course_post_comment_path(@course, @post ) %>
+
+

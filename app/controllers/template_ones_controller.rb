@@ -16,9 +16,9 @@ class TemplateOnesController < ApplicationController
   # GET /template_ones/1.json
   def show
     # if current_user and not current_user.try(:admin?)
-    if current_user && !current_user.try(:admin?)
-      redirect_to posts_path 
-    end
+    # if current_user && !current_user.try(:admin?)
+    #   redirect_to course_posts_path 
+    # end
     @projects = Project.all
     @incoming_contact = IncomingContact.new 
     @posts = Post.last(@template_one.testimonial_count).reverse  

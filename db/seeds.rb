@@ -47,9 +47,9 @@ app_setting = AppSetting.create!(
   tab_name: 'acme_app',
   front_end_color: 'red', 
   app_title: 'Chesnowitz', 
-  app_email_1:'example@example.com', 
+  app_email_1:'udemyapprails@gmail.com', 
   app_email_2:'example2@example.com',
-  app_email_title_1: "title goes here 1",
+  app_email_title_1: "From udemyapprails@gmail.com",
   app_email_title_2: "title goes here 2"
 )
 puts app_setting.inspect
@@ -169,12 +169,12 @@ sleep 3
 
 app_setting = AppSetting.find_or_initialize_by(id: 1)
 app_setting.theme_name = 'pulse'
-app_setting.tab_name = 'Frank Rizzo'
+app_setting.tab_name = 'Chesnowitz'
 app_setting.front_end_color = 'blue' 
-app_setting.app_title = 'Crazy Times' 
-app_setting.app_email_1 = 'example@example.com'
+app_setting.app_title = 'Stephen Chesnowitz' 
+app_setting.app_email_1 = 'udemyapprails@gmail.com'
 app_setting.app_email_2 = 'example2@example.com'
-app_setting.app_email_title_1 = "title goes here 1"
+app_setting.app_email_title_1 = "From udemyapprails@gmail.com"
 app_setting.app_email_title_2 = "title goes here 2"
 app_setting.save
 puts app_setting.inspect

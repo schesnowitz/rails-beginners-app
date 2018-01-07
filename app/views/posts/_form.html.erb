@@ -1,13 +1,18 @@
-<%= simple_form_for [@course, @course.posts.build] do |f| %>
-  <%= f.error_notification %>
+<%= tinymce_assets %><%= tinymce %>
+<%= form_for [@course, @course.posts.build] do |f| %>
+
+
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :body %>
-    <%= f.input :course_id %>
+    <label for="">Video Title</label>
+    <%= f.text_field :title, class: "form-control" %>
+    <br>
+    <%= f.text_area :body,  class: "tinymce", :rows => 20, :cols => 40 %>
+    <%= f.number_field :course_id %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
+   
 <% end %>
