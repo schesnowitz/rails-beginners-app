@@ -28,6 +28,7 @@
       <td>
         <%= link_to 'Edit', edit_course_post_path(@course, post), class: "btn btn-outline-secondary btn-sm" if current_user.try(:admin?)  %>
       </td>
+            <td><%= link_to 'Destroy',course_post_path(@course, post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
     <% end %>
