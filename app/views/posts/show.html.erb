@@ -24,7 +24,6 @@
 </div>
 <br>
 <%= @post.body.html_safe %>
-<p>.....</p>
 <%= render @post.comments.order(created_at: :desc ) %> 
 <p>
   <% if current_user.try(:admin?) %> 
