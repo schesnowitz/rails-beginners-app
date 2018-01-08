@@ -9,7 +9,7 @@
           <div class="item mb-4">
             <p class="lead"><%= post.title %></p>
             <hr class="colored">
-            <p><%= post.body.truncate(150) %></p>
+            <p><%= post.body.truncate(150).html_safe %></p>
             <% if post.user.image.present? %>  
             <div class="testimonial-img">
               <img class="rounded-circle img-fluid" src="<%= asset_url post.user.image_url(:thumb) if post.user.image.present? %>" alt="">
