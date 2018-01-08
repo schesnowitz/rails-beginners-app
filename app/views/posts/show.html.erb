@@ -9,17 +9,17 @@
 </p>
 <div class="card text-center">
   <div class="card-header">
-    Section: 
+    Section: <%= @post.section_number %>
     <span class="badge badge-primary">Lecture Number: <%= @post.lecture_number %></span> 
-    <%= @post.section_number %> <%= link_to 'Edit', edit_course_post_path(@course, @post), class: 'btn btn-outline-info pull-right' %>
+     <%= link_to 'Edit', edit_course_post_path(@course, @post), class: 'btn btn-outline-info pull-right' %>
   </div>
   <div class="card-block">
-    <h4 class="card-title"><%= @post.title %></h4>
+    <h4 class="card-title">Title: <%= @post.title %></h4>
     <p class="card-text"></p>
   </div>
   <div class="card-footer text-muted">
 
-    <%= @post.section_name %>
+    Section Name: <%= @post.section_name %>
   </div>
 </div>
 <br>

@@ -5,8 +5,8 @@ class PostsController < ApplicationController
 
   
   def index
-    @posts = Post.all.order(created_at: :desc)
-    @course = Course.find(params[:course_id]) 
+    flash[:danger] = "Route does not exist"
+    redirect_back(fallback_location: root_path)
   end
 
   # GET /posts/1
