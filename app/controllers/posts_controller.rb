@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     not_administrator
-    @post = current_user.posts.build(post_params) 
+    # @post = current_user.posts.build(post_params) 
     @course = Course.find(params[:course_id]) 
     @user = current_user
     respond_to do |format|
