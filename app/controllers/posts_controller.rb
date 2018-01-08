@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    not_administrator
+    # not_administrator
     @course = Course.find(params[:course_id]) 
   end
 
