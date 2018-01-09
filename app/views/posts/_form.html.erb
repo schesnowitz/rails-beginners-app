@@ -2,7 +2,7 @@
 <%= form_for [@course, @course.posts.build] do |f| %>
 <div class="form-inputs">
   <label for="">Section Name</label><br>
-  <%= f.select :section_name, options_for_select(Post::VIDEOS), class: "form-control" %>
+<%= f.select :section_name, (Post::RUBY_SECTIONS), class: "form-control" %>
   <br>
   <label for="">Lecture Number</label>
   <%= f.number_field :lecture_number, class: "form-control" %>
@@ -13,6 +13,6 @@
   <%= f.number_field :course_id %>
 </div>
 <div class="form-actions">
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn btn-outline-success' %>
 </div>
 <% end %>
